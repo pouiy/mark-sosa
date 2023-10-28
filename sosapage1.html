@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark SC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      
+        <h1>Mark Sosa</h1>
+        <p>Web Developer | Designer | Content Creator | Finance</p>
+    </header>
+
+    <div class="top">
+        <a href="sosapage1.html" class="H"><b>Home</b></a>
+        <a href="sosaabout.html" class="A"><b>About</b></a>
+        <a href="sosa pro.html" class="C"><b>Contacts</b></a>
+    </div>
+    <section>
+        
+        <div class="container">
+           
+            <div class="photo-container">
+                <a href="calculator.html">
+                <div class="photo"  style="background-image: url('calculator.PNG');"></div></a>
+                <div class="text-container">
+                    <p class="text">SIMPLE CALCULATOR</p>
+                </div>
+            </div>
+            <a href="https://www.myfxbook.com/members/MarkSosa/shhit/10282828"><img alt="widget" src="https://widgets.myfxbook.com/widgets/10282828/medium.jpg"/></a>
+            <a href="https://www.myfxbook.com/members/MarkSosa/left-right-goodnight/10367731"><img alt="widget" src="https://widgets.myfxbook.com/widgets/10367731/medium.jpg"/></a>
+            <a href="https://www.myfxbook.com/members/MarkSosa/mid-shittsfs/10286203"><img alt="widget" src="https://widgets.myfxbook.com/widgets/10286203/medium.jpg"/></a>
+        <div class="container">
+    <div class="photo-container">
+        <div class="photo" style="background-image: url('1675299193955.jpg');"></div>
+        <div class="text-container">
+            <p class="text">This is photo 1</p>
+        </div>
+    </div>
+    <div class="photo-container">
+        <div class="photo" style="background-image: url('1675299211698.jpg');"></div>
+        <div class="text-container">
+            <p class="text">This is photo 2</p>
+        </div>
+    </div>
+    <div class="photo-container">
+        <div class="photo" style="background-image: url('1675299221682.jpg');"></div>
+        <div class="text-container">
+            <p class="text">This is photo 3</p>
+        </div>
+    </div>
+    <div class="photo-container">
+        <div class="photo" style="background-image: url('dds.png');"></div>
+        <div class="text-container">
+            <p class="text">This is photo 4</p>
+        </div>
+    </div>
+    <div class="photo-container">
+        <div class="photo" style="background-image: url('319713054_563181101862792_3264833091488935218_n.jpg');"></div>
+        <div class="text-container">
+            <p class="text">belle</p>
+        </div>
+    </div>
+    <div class="photo-container">
+        <div class="photo" style="background-image: url('367405110_970686444026599_607933559971755371_n.jpg');"></div>
+        <div class="text-container">
+            <p class="text">christmas 2022</p>
+        </div>
+    </div>
+  </section>
+</div >
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        const photos = document.querySelectorAll('.photo');
+        const textElements = document.querySelectorAll('.text');
+
+        function checkFade() {
+            photos.forEach((photo, index) => {
+                if (isInViewport(photo)) {
+                    photo.classList.add('fade-in');
+                    textElements[index].classList.add('fade-in');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('resize', checkFade);
+        checkFade();
+    </script>
+
+     <div button id="backToTopBtn" onclick="scrollToTop()">Back to Top</button>
+     <script>
+         var backToTopButton = document.getElementById('backToTopBtn');
+ 
+         window.addEventListener('scroll', function () {
+             if (document.documentElement.scrollTop > 100) {
+                 backToTopButton.style.display = 'block';
+             } else {
+                 backToTopButton.style.display = 'none';
+             }
+         });
+ 
+         function scrollToTop() {
+             window.scrollTo({
+                 top: 0,
+                 behavior: 'smooth' 
+             });
+         }
+     </script>
+     </div>
+</body>
+</html>
